@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>임베디드 액츄레이터 제어</title>
+		</head>
+		<body bgcolor='yellow'>
+			<h2 align='center'>임베디드 액튜레이터 제어</h2>
+			<p><table border=0 width=500 cellspacing=10>
+				<tr>
+					<td align='right'>LEDB</td>
+					<td align='right'><a href='LEDB/1'>ON</a></td>
+					<td> <a href='LEDB/0'>OFF</a></td> 
+					<td> <font color=<%= LEDB %> > * </font></td>
+				</tr>
+				<tr>
+					<td align='right'>BUZZER</td>
+					<td align='right'><a href='BUZ/1'>ON</a></td>
+					<td> <a href='BUZ/0'>OFF</a></td> 
+					<td> <font color=<%= BUZ %> > * </font></td>
+				</tr>
+				<tr>
+					<td align='right'>LED3</td>
+					<td align='right'>ON (<a href='LEDR/1'>R</a>
+								<a href='LEDG/1'>G</a>
+								<a href='LEDB/1'>B</a>)</td>
+					<td>OFF (<a href='LEDR/0'>R</a>
+								<a href='LEDG/0'>G</a>
+								<a href='LEDB/0'>B</a>)</td>
+					<td><font color='#FF0000'>*</font>
+						<font color='#00ff00'>*</font>
+						<font color='#0000ff'>*</font></td>
+				</td>
+
+			</table></p>
+
+			<hr>
+
+			<h2 align='center'><font color='brown'>임베디드 센서 제어</font></h2>
+			<p><table border=0 width=500 cellspacing=10>
+				<tr>
+					<td align='right'>광센서</td>
+					<td align='right'><a href='LIGHT/1'>ON</a></td>
+					<td> <a href='LIGHT/0'>OFF</a></td> 
+					<td> <a href='LIGHT/2'>측정값보기</a></td>
+					<td> <font color=<%= LIGHT %> > * </font></td>
+				</tr>
+				<tr>
+					<td align='right'>소리센서</td>
+					<td align='right'><a href='SOUND/1'>ON</a></td>
+					<td> <a href='SOUND/0'>OFF</a></td> 
+					<td> <a href='SOUND/2'>측정값보기</a></td>
+					<td> <font color='#bfbfbf' > * </font></td>
+				</tr>
+			</table></p>
+			</table></p>
+		</body>
+	</html>
+
+			

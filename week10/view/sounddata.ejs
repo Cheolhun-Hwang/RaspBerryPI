@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+	<head>
+		<title>소리 측정결과</title>
+	</head>
+	<body>
+		<h2>소리 측정결과</h2>
+		<p>측정시작부터 측정된 값을 보여줍니다.(1은 소리!, 0은 조용) </p>
+		<hr>
+		<table>
+			<tr>
+				<% sounddata.forEach(function(ele, i){ %>
+					<td> <color=red><%= ele %></td>
+				<%	});%>
+			</tr>
+		</table>
+	</body>
+</html>
