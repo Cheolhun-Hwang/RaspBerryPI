@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf8'>
+		<script src="/socket.io/socket.io.js"></script>
+		<script>
+			window.onload = function(){
+				var dataview = document.getElementById('dataview');
+				var socket = io.connect();
+				var html='';
+
+				socket.on('watch', function(data){
+					html = '';
+					dataview.innerHTML = '';
+
+					for(var i = 0 ; i < data.length ; i++){
+						html += "시간 :  " + data[i].stamptime+" / 거리 : " + data[i].distance+"<br>";
+					}
+
+					
+					dataview.innerHTML = html;
+				});
+
+				document.getElementById('start').onclick = function(){
+					socket.emit('startmsg');
+				};
+
+				document.getElementById('stop').onclick = function(){
+					socket.emit('stopmsg');
+				};
+			};
+		</script>
+
+		<title>메인 사이트</title>
+	</head>
+	<body bgcolor="lightcyan">
+		<h2>거리측정제어(초음파센서제어)</h2>
+		<hr>
+		<h3>측정주기 설정 및 가동</h3>
+		<hr>
+		<input type='button' id='start' value='초음파센서가동' />
+		<input type='button' id='stop' value='초음파센서중지' />
+		<hr>
+		<p id='dataview'>초음파센서가동시 이곳에 측정거리값이 출력됩니다.</p>
+	</body>
+</html>
+
